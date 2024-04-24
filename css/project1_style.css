@@ -1,0 +1,230 @@
+#skip {
+    position: absolute;
+    top: -30px;
+    height: 25px;
+    background-color: white;
+}
+#skip:focus {
+    top: 15px;
+}
+
+body {
+    position: relative;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "mhouse"
+        "image1"
+        "image2"
+        "image3"
+        "image4"
+        "image5"
+        "image6";
+    grid-gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.grid img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 3px solid black;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.mhouse {
+    grid-area: mhouse;
+    justify-self: center;
+    align-self: center;
+}
+
+.image1 {
+    grid-area: image1;
+}
+
+.image2 {
+    grid-area: image2;
+}
+
+.image3 {
+    grid-area: image3;
+}
+
+.image4 {
+    grid-area: image4;
+}
+
+.image5 {
+    grid-area: image5;
+}
+
+.image6 {
+    grid-area: image6;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    padding: 100px;
+    left: 31rem;
+    top: 10rem;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 300px;
+    overflow: auto;
+    background-color: rgba(70, 70, 70, 0.9);
+    color: white;
+    box-shadow: 0 0 10px black;
+}
+.container {
+    z-index: 998;
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    background-color: #d6ccc2;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(56, 56, 56, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    display: inline;
+    text-decoration: none;
+    color: #1d3557;
+}
+
+nav ul li a:hover {
+    color: #457b9d;
+    text-decoration: underline;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+.light {
+    background-color: rgb(255, 184, 184);
+    color: black;
+}
+#theme_button {
+    background-color: rgb(180, 234, 255);
+    color: black;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#theme_button:hover {
+    background-color: rgb(102, 179, 209);
+    color: white;
+    transform: scale(1.3);
+}
+
+@media screen and (min-width:768px) {
+    #skip:focus {
+        top: 15px;
+    }
+    .grid {
+        display: grid;
+        grid-template-areas:
+            "mhouse mhouse"
+            "image1 image2"
+            "image3 image4"
+            "image5 image6";
+        grid-gap: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .dark {
+        background-color: black;
+        color: white;
+    }
+    .light {
+        background-color: rgb(255, 184, 184);
+        color: black;
+    }
+    #theme_button {
+        background-color: rgb(180, 234, 255);
+        color: black;
+        border: 2px solid white;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    #theme_button:hover {
+        background-color: rgb(102, 179, 209);
+        color: white;
+        transform: scale(1.3);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #skip:focus {
+        top: 15px;
+    }
+    .grid {
+        display: grid;
+        grid-template-areas:
+            "mhouse mhouse mhouse"
+            "image1 image2 image3"
+            "image4 image5 image6";
+        grid-gap: 20px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .dark {
+        background-color: black;
+        color: white;
+    }
+    .light {
+        background-color: rgb(255, 184, 184);
+        color: black;
+    }
+    #theme_button {
+        background-color: rgb(180, 234, 255);
+        color: black;
+        border: 2px solid white;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    #theme_button:hover {
+        background-color: rgb(102, 179, 209);
+        color: white;
+        transform: scale(1.3);
+    }
+}
